@@ -1,0 +1,23 @@
+days = float(input("Welcome to the Trip Cost Calculator\nHow many days will you be staying?"))
+hotel = float(input("How much does the hotel cost per night?"))
+flight = float(input("How much does flight cost?"))
+car = float(input("If you need a rental car please enter the price, otherwise enter zero."))
+other = float(input("Enter other possible expenses:"))
+total = round(((days) * (hotel)) + ((days) * (car)) + (other) + (flight), 2)
+print(f"Total cost: {total}")
+
+
+#alternate version
+# print("Welcome to the Trip Cost Calculator!")
+# days = input("How many days will you stay? ")
+# days = int(days)
+# hotel = input("How much does a hotel cost per night? ")
+# hotel = float(hotel)
+# flight = input("How much does flight cost? ")
+# flight = float(flight)
+# rentalCar = input("If you need a rental car please enter price otherwise enter zero. ")
+# rentalCar = float(rentalCar)
+# other = input("Enter other possible expenses ")
+# other = float(other)
+# output = round(days * hotel + days * rentalCar + flight + other, 2)
+# print(f"Total Cost: {output}")
