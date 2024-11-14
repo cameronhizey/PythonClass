@@ -1,33 +1,9 @@
-# import random
-# word_list = ["UDEMY", "APPMILLERS", "PYTHON"]
-#
-# select = random.randint(0, 2)
-# secret_word = word_list[select]
-# secret_len = len(secret_word)
-# space = []
-# for _ in secret_word:
-#     blank = "_"
-#     space.append(blank)
-#
-# guess = input("Guess a letter: ").upper()
-#
-# guessed_letter = []
-# def guess_checker(p_guess):
-#     if p_guess in guessed_letter == True:
-#         print("Already guessed, try again")
-#     else:
-#         guessed_letter.append(guess)
-#
-#
-# print(secret_word.index(guess))
-# def letter_checker(p_check):
-#     if p_check in secret_word:
-#         space.insert(i, p_check):
-#         if guess in secret_word:
-#             space[i].replace(guess)
 
 import random
-word_list = ["APPMILLERS", "UDEMY"]
+from ascii_art import hangman_stages, logo
+from HangManWords import word_list
+print(logo)
+# word_list = ["APPMILLERS", "UDEMY"]
 secret_word = random.choice(word_list)
 word_length = len(secret_word)
 guessed_letters = []
@@ -55,7 +31,7 @@ while not end_game:
             print("You Lose.")
 
     print(" ".join(blanks))
-    print(lives)
+    print(hangman_stages[lives])
     if "_" not in blanks:
         end_game = True
         print("You win")
